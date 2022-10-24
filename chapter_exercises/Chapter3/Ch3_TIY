@@ -1,0 +1,2 @@
+names = ['dan', 'cole', 'chupe', 'sulaiman']
+print(f"Hello {names[0].title()}, how are you?")

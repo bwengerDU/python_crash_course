@@ -1,0 +1,2 @@
+cars = ['porsche', 'mercedes', 'gtr', 'ferrari', 'volkswagen']
+print(f"My favorite car is a {cars[0].title()} and find that {cars[3].title()} is an incredible vehicle, but not worth the price.")
