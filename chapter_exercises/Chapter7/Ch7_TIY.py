@@ -133,5 +133,5 @@ while polling_active:
         polling_active = False
 #Provide polling results
 print("\nThe polling results are as follows:")
-for response in responses.list():
+for response in responses:
     print(f"A desired vacation location is {response}.")    
