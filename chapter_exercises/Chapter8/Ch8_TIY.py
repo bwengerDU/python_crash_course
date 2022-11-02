@@ -149,3 +149,31 @@ send_messages(unsent_msgs [:], sent_msgs)
 sent_messages(sent_msgs)
 
 print(unsent_msgs)
+
+#8-12
+def make_sandwich(*toppings):
+    """Summarize the sandwich ordered"""
+    print("\nWe are making a sandwich with the following ingredients:")
+    for topping in toppings:
+        print(f"- {topping.title()}")
+make_sandwich('avocado', 'bacon', 'tomatoes')
+make_sandwich('mustard', 'spinach', 'olives')
+make_sandwich('lettuce')
+
+#8-13
+def build_profile(first, last, **user_info):
+    """Build a dictionary containing information about myself"""
+    user_info['first _name'] = first
+    user_info['last_name'] = last
+    return user_info
+user_profile = build_profile('cale', 'makar', team='colorado avalanche', position='defenseman', number='8')
+print(user_profile)
+
+#8-14
+def car(manufacturer, model, **car_info):
+    """Build car profile and additional info input"""
+    car_info['manufacturer'] = manufacturer
+    car_info['model'] = model
+    return car_info
+car_profile = car('porsche', '928', engine='v8', color='blue', manual_transmission=True)
+print(car_profile)
