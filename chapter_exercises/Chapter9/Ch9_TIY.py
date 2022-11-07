@@ -265,3 +265,125 @@ my_tesla.battery.describe_battery()
 print("\nTry upgrading the battery a second time.")
 my_tesla.battery.upgrade_battery()
 my_tesla.battery.describe_battery()
+
+#9-10 work is done in Restaurant.py
+
+#9-11 work is done in 9_11_tiy.py
+
+#9-12 work is done in multiple 9_12 files
+
+#9-13
+from random import randint
+class Die:
+    """Features related to a standard 6 sided die"""
+    def __init__(self, sides = 6):
+        """initialize die attributes"""
+        self.sides = sides
+    def roll_die(self):
+        """method to roll a random die side number"""
+        return randint (1,self.sides)
+side6 = Die() 
+results = []
+for roll_num in range(10):
+    result = side6.roll_die()
+    results.append(result)
+print("10 rolls of a 6-sided die:")
+print(results)
+
+#Make the die 10 sided, roll 10 times
+side6 = Die(sides=10) 
+results = []
+for roll_num in range(10):
+    result = side6.roll_die()
+    results.append(result)
+print("10 rolls of a 10-sided die:")
+print(results)
+
+#make the die 20 sided, roll 10 times
+side6 = Die(sides = 20) 
+results = []
+for roll_num in range(10):
+    result = side6.roll_die()
+    results.append(result)
+print("10 rolls of a 20-sided die:")
+print(results)
+
+#9-14
+from random import choice
+lotto_list = ['3', '16', '20', '23', '29', '37', '42', '48', '55', '67', 'A', 'G', 'N', 'Q', 'Y']
+digit_one = choice(lotto_list)
+digit_two = choice(lotto_list)
+digit_three = choice(lotto_list)
+digit_four = choice(lotto_list)
+print(f"The winning lottery ticket has the following figures: {digit_one}, {digit_two}, {digit_three}, and {digit_four}.")
+
+
+# 9-15
+from random import choice
+
+def get_winning_ticket(possibilities):
+    """Return a winning ticket from a set of possibilities."""
+    winning_ticket = []
+
+    # We don't want to repeat winning numbers or letters, so we'll use a
+    #   while loop.
+    while len(winning_ticket) < 4:
+        pulled_item = choice(possibilities)
+
+        # Only add the pulled item to the winning ticket if it hasn't
+        #   already been pulled.
+        if pulled_item not in winning_ticket:
+            winning_ticket.append(pulled_item)
+
+    return winning_ticket
+
+def check_ticket(played_ticket, winning_ticket):
+    # Check all elements in the played ticket. If any are not in the 
+    #   winning ticket, return False.
+    for element in played_ticket:
+        if element not in winning_ticket:
+            return False
+
+    # We must have a winning ticket!
+    return True
+
+def make_random_ticket(possibilities):
+    """Return a random ticket from a set of possibilities."""
+    ticket = []
+    # We don't want to repeat numbers or letters, so we'll use a while loop.
+    while len(ticket) < 4:
+        pulled_item = choice(possibilities)
+
+        # Only add the pulled item to the ticket if it hasn't already
+        #   been pulled.
+        if pulled_item not in ticket:
+            ticket.append(pulled_item)
+
+    return ticket
+
+
+possibilities = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'a', 'b', 'c', 'd', 'e']
+winning_ticket = get_winning_ticket(possibilities)
+
+plays = 0
+won = False
+
+# Let's set a max number of tries, in case this takes forever!
+max_tries = 1_000_000
+
+while not won:
+    new_ticket = make_random_ticket(possibilities)
+    won = check_ticket(new_ticket, winning_ticket)
+    plays += 1
+    if plays >= max_tries:
+        break
+
+if won:
+    print("We have a winning ticket!")
+    print(f"Your ticket: {new_ticket}")
+    print(f"Winning ticket: {winning_ticket}")
+    print(f"It only took {plays} tries to win!")
+else:
+    print(f"Tried {plays} times, without pulling a winner. :(")
+    print(f"Your ticket: {new_ticket}")
+    print(f"Winning ticket: {winning_ticket}")
