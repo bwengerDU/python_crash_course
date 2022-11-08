@@ -1,0 +1,5 @@
+In Python you can store information in lists or immutable tuples.
+In Python you can work with data in strings, integers, and floats. 
+In Python you can provide written notations along with your coding to provide explanation and reasoning behind your coding for others to read. 
+In Python you can break down coding into modules that can be saved in separate files and called into the working file when needed. 
+In Python you can share and collaborate your coding with a multitude of other users in order to improve, simplify, and optimize your code's efficiency. 
