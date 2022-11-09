@@ -72,4 +72,93 @@ while True:
 
         with open(filename, 'a') as file_object:
             file_object.write(f"\n{reasons}")         
-#10-6
+#10-6 prompt for two numbers, add them together. Create a friendly error message if anything other than numbers are entered. 
+try:
+    x = input("Please provide the first number to be added: ")
+    x = int(x)
+
+    y = input("Please provide the second number to be added: ")
+    y = int(y)
+except ValueError:
+    print("Sorry, I can only add numbers.")
+else:
+    sum = x + y
+    print(f"The sum of {x} and {y} is {sum}.")
+
+#10-7 wrap previous coding into a while statement to allow users to continually 
+print("Please enter 'quit' at any time to quit the program")
+while True:
+    try:
+        x = input("Please provide the first number to be added: ")
+        if x == 'quit':
+            break
+        x = int(x)
+
+        y = input("Please provide the second number to be added: ")
+        if y == 'quit':
+            break
+        y = int(y)
+    except ValueError:
+        print("Sorry, I can only add numbers.")
+    else:
+        sum = x + y
+        print(f"The sum of {x} and {y} is {sum}.")
+
+#10-8 read in two files, make on file an error and have an error message print that is user friendly 
+cats_file = '/Users/bryanwenger/Desktop/python_work/python_crash_course/chapter_exercises/Chapter10/cats.txt'
+dogs_file = '/Users/bryanwenger/Desktop/python_work/python_crash_course/chapter_exercises/Chapter10/dog.txt'
+files = [cats_file, dogs_file]
+
+for file in files:
+    print(f"\nReading file: {file}")
+    try:
+        with open(file) as f:
+            contents = f.read()
+            print(contents)
+    except FileNotFoundError:
+        print("  Sorry, I can't find that file.")
+
+#10-9 format the above code to perform a silent pass on the missing file like 
+cats_file = '/Users/bryanwenger/Desktop/python_work/python_crash_course/chapter_exercises/Chapter10/cats.txt'
+dogs_file = '/Users/bryanwenger/Desktop/python_work/python_crash_course/chapter_exercises/Chapter10/dog.txt'
+files = [cats_file, dogs_file]
+
+for file in files:
+    try:
+        with open(file) as f:
+            contents = f.read()
+    except FileNotFoundError:
+        pass
+    else:
+        print(f"\nReading file: {file}")
+        print(contents)
+
+#10-10 use large text file and find how many times particular words appear in the famous book
+def count_one_word(filename, word):
+    """Count the approximate number of words in a file"""
+    try:
+        with open(filename, encoding='utf8') as f:
+            contents = f.read()
+    except FileNotFoundError: 
+        print(f"Sorry, the file {filename} does not exist.")
+    else:
+        word_count = contents.lower().count(word)
+        print(f"The book contains the word {word} approximately {word_count} times.")
+
+metamorph = '/Users/bryanwenger/Desktop/python_work/python_crash_course/chapter_exercises/Chapter10/the_metamorphosis.txt' 
+count_one_word(metamorph, 'cold')
+
+bible = '/Users/bryanwenger/Desktop/python_work/python_crash_course/chapter_exercises/Chapter10/the_bible.txt' 
+count_one_word(bible, 'cold')
+
+crimpun = '/Users/bryanwenger/Desktop/python_work/python_crash_course/chapter_exercises/Chapter10/crime_punishment.txt' 
+count_one_word(crimpun, 'cold')
+
+# search for the word 'the' with no space given, then once with a space after 'the ' 
+the_search = '/Users/bryanwenger/Desktop/python_work/python_crash_course/chapter_exercises/Chapter10/crime_punishment.txt' 
+count_one_word(the_search, 'the')
+
+the_space_search = '/Users/bryanwenger/Desktop/python_work/python_crash_course/chapter_exercises/Chapter10/crime_punishment.txt' 
+count_one_word(the_space_search, 'the ')
+
+#10-11 prompt for favorite number, store in json dump and write a program that remembers the favorite number
