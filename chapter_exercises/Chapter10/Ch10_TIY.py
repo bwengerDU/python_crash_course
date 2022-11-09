@@ -162,3 +162,64 @@ the_space_search = '/Users/bryanwenger/Desktop/python_work/python_crash_course/c
 count_one_word(the_space_search, 'the ')
 
 #10-11 prompt for favorite number, store in json dump and write a program that remembers the favorite number
+import json
+fav_number = input("What is your favorite number? ")
+number = 'fav_number.json'
+
+with open(filename, 'w') as f:
+    json.dump(fav_number, f)
+    print(f"I remember that your favorite number is {fav_number}.")
+
+#10-12 combine two programs from 10-11. if number is already stored, report it. If not, prompt for favorite number. Run program twice. 
+import json
+number = 'fav_number.json'
+try:
+    with open(number) as f:
+        fav_number = json.load(f)
+except FileNotFoundError:
+    fav_number = input ("What is your favorite number? ")
+    with open(number, 'w') as f:
+        json.dump(fav_number, f)
+        print(f"I remember your favorite number is {fav_number}.")
+else:
+    print(f"I remembered from last time that your favorite number is {fav_number}.")
+
+#10-13 modify remember_me.py to prompt in case the user attempting login is a different person, allow for them to enter other user info
+import json
+
+def get_stored_username():
+    """Get stored username if available."""
+    filename = 'username.json'
+    try:
+        with open(filename) as f_obj:
+            username = json.load(f_obj)
+    except FileNotFoundError:
+        return None
+    else:
+        return username
+
+def get_new_username():
+    """Prompt for a new username."""
+    username = input("What is your name? ")
+    filename = 'username.json'
+    with open(filename, 'w') as f_obj:
+        json.dump(username, f_obj)
+    return username
+
+def greet_user():
+    """Greet the user by name."""
+    username = get_stored_username()
+    if username:
+        correct = input(f"Are you {username}? (y/n) ")
+        if correct == 'y':
+            print(f"Welcome back, {username}!")
+        else:
+            username = get_new_username()
+            print(f"We'll remember you when you come back, {username}!")
+    else:
+        username = get_new_username()
+        print(f"We'll remember you when you come back, {username}!")
+
+greet_user()
+
+
