@@ -21,4 +21,13 @@ This section is focusing on the wide range of matplotlib data visualization capa
 2) In the visualization below the python Random Walk method was used to generate 50,000 random movements and plotting them with a starting point highlighted in green and a finishing point highlighted in red. 
 ![alt text](https://github.com/bwengerDU/python_crash_course/blob/main/images/rw.png)
 
+3) The third visual is a histogram that displays the results of rolling two 6-sided die 1,000 times. 
+![alt text](https://github.com/bwengerDU/python_crash_course/blob/main/images/histogram1.png)
+
+This histogram shows the combined number of two 6-sided die rolled 1,000 times. 
+![alt text](https://github.com/bwengerDU/python_crash_course/blob/main/images/histogram2.png)
+
+This histogram shows the combined number of a 6-sided die and a 10-sided die rolled 50,000 times. 
+![alt text](https://github.com/bwengerDU/python_crash_course/blob/main/images/histogram3.png)
+
 ## Project 3: Web Applications
