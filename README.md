@@ -12,5 +12,13 @@ Python's Pygame package will be used as the primary mode for creating the game.
 
 The game is initiated by mouse clicking on the play button, at which time the mouse cursor will disappear from the playing screen. Score is kept in the top right corner and with each subsequent level that is reached the aliens become quicker and the scoring is increased to reflect this increased difficulty. The current level tracked in the top right corner as well. In the top middle of the screen the game's top score is being tracked. In the top left the number of remaining player lives is tracked. The player will start with three and the game will end when they are out of lives. 
 ## Project 2: Data Visualization
+This section is focusing on the wide range of matplotlib data visualization capabilities. 
+
+1) The visualization below represents a list of digits being cubed and represented through increasing amounts via a color map with deeper reds achieved in higher numbers and lighter reds represented at lower numbers. 
+
+![alt text](https://github.com/bwengerDU/python_crash_course/blob/main/images/colormap.png)
+
+2) In the visualization below the python Random Walk method was used to generate 50,000 random movements and plotting them with a starting point highlighted in green and a finishing point highlighted in red. 
+![alt text](https://github.com/bwengerDU/python_crash_course/blob/main/images/rw.png)
 
 ## Project 3: Web Applications
