@@ -30,4 +30,7 @@ This histogram shows the combined number of two 6-sided die rolled 1,000 times.
 This histogram shows the combined number of a 6-sided die and a 10-sided die rolled 50,000 times. 
 ![alt text](https://github.com/bwengerDU/python_crash_course/blob/main/images/histogram3.png)
 
+This line graph showcases the high and low temperatures across a year. The fill_between() functions was used to shade in the area between highs and lows to showcase the temperature range. 
+![alt text](https://github.com/bwengerDU/python_crash_course/blob/main/images/sitkahl.png)
 ## Project 3: Web Applications
+
