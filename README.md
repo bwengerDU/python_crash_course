@@ -30,7 +30,13 @@ This histogram shows the combined number of two 6-sided die rolled 1,000 times.
 This histogram shows the combined number of a 6-sided die and a 10-sided die rolled 50,000 times. 
 ![alt text](https://github.com/bwengerDU/python_crash_course/blob/main/images/histogram3.png)
 
-This line graph showcases the high and low temperatures across a year. The fill_between() functions was used to shade in the area between highs and lows to showcase the temperature range. 
+This line graph showcases the high and low temperatures across a year read in via CSV. The fill_between() functions was used to shade in the area between highs and lows to showcase the temperature range. 
 ![alt text](https://github.com/bwengerDU/python_crash_course/blob/main/images/sitkahl.png)
+
+This visualization imports JSON files of Earthquake data and outputs a map of location and maginitude of earthquakes. 
+![alt text](https://github.com/bwengerDU/python_crash_course/blob/main/images/sitkahl.png)
+
+This visual is sourced by a Github API that charts the most starred repositories on Github with the ability to hover a line to see the repository's information and it will link to the site when clicked. 
+![alt text](https://github.com/bwengerDU/python_crash_course/blob/main/images/api.png)
 ## Project 3: Web Applications
 
