@@ -34,7 +34,7 @@ This line graph showcases the high and low temperatures across a year read in vi
 ![alt text](https://github.com/bwengerDU/python_crash_course/blob/main/images/sitkahl.png)
 
 This visualization imports JSON files of Earthquake data and outputs a map of location and maginitude of earthquakes. 
-![alt text](https://github.com/bwengerDU/python_crash_course/blob/main/images/sitkahl.png)
+![alt text](https://github.com/bwengerDU/python_crash_course/blob/main/images/eqmap.png)
 
 This visual is sourced by a Github API that charts the most starred repositories on Github with the ability to hover a line to see the repository's information and it will link to the site when clicked. 
 ![alt text](https://github.com/bwengerDU/python_crash_course/blob/main/images/api.png)
