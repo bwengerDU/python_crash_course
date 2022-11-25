@@ -40,3 +40,4 @@ This visual is sourced by a Github API that charts the most starred repositories
 ![alt text](https://github.com/bwengerDU/python_crash_course/blob/main/images/api.png)
 ## Project 3: Web Applications
 
+This project is built upon Django functions. 
