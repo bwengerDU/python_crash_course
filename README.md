@@ -40,4 +40,11 @@ This visual is sourced by a Github API that charts the most starred repositories
 ![alt text](https://github.com/bwengerDU/python_crash_course/blob/main/images/api.png)
 ## Project 3: Web Applications
 
-This project is built upon Django functions. 
+This project is to build an application based upon Django functions. The initial phase is to set up a few topics that each have their own pages that can be accessed via the main page. 
+
+The second phase aimed towards allowing users to create accounts and to add entries for the topics. 
+
+The final phase is to set the styling and physical layout of the application. The site allows for a variety of topics in which entries can be added to each topic individually. User accounts are created that allow for users to create unique logins and that each account can add changes to the site while taking ownership of the changes and restricting their changes to their personal profile. Heroku is used to deploy the application. 
+
+The final version is shown below. 
+![alt text](https://github.com/bwengerDU/python_crash_course/blob/main/images/django.png)
